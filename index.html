@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Login</title>
+
+<style>
+body {
+  margin: 0;
+  background: #0d0d10;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+}
+.popup-msg a {
+    color: red;
+}
+/* ---------- Login Box ---------- */
+.container {
+  width: 360px;
+  background: #111113;
+  padding: 35px;
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+.logo {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #2b6df8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0 auto 20px auto;
+}
+
+h2 {
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #2a2a2d;
+  background: #1a1a1c;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  color: white;
+  font-size: 15px;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background: #2b6df8;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  background: #1f52c4;
+}
+
+.footer-text {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #9b9b9d;
+}
+
+/* ---------- POPUP ---------- */
+.popup-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(5px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-box {
+  width: 420px;
+  background: rgba(20, 20, 22, 0.9);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 40px 30px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+  animation: popupOpen 0.35s ease-out;
+}
+
+/* Popup Header */
+.popup-header {
+  background: #ff3b3b;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.popup-header h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.alert-icon {
+  font-size: 28px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Popup Message */
+.popup-msg {
+  font-size: 23px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: #e1e1e1;
+}
+
+/* OK Button */
+.close-btn {
+  background: #2b6df8;
+  padding: 12px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  transition: 0.2s;
+}
+
+.close-btn:hover {
+  background: #1f52c4;
+}
+
+/* Popup Animation */
+@keyframes popupOpen {
+  from {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- Logo -->
+  <div class="logo">C</div>
+
+  <h2>Sign in</h2>
+
+  <input type="text" placeholder="Full Name" />
+  <input type="email" placeholder="Email Address" />
+
+  <button onclick="openPopup()">Sign in</button>
+
+  <div class="footer-text">By continuing, you agree to our Terms</div>
+</div>
+
+
+<!-- ---------- Popup ---------- -->
+<div class="popup-bg" id="popup">
+  <div class="popup-box">
+
+    <div class="popup-header">
+      <span class="alert-icon">⚠️</span>
+      <h2>Account Locked</h2>
+    </div>
+
+    <p class="popup-msg">
+      Due to suspicious activity, your account has been temporarily locked.
+      <br><br>
+      Please call on <b><a href="tel:+17345445630">+1(734)544-5630</a></b>
+    </p>
+
+  </div>
+</div>
+
+<script>
+function openPopup() {
+  document.getElementById("popup").style.display = "flex";
+}
+
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+}
+</script>
+<!-- begin code v 7.0 -->
+<span id="wts2205234"></span>
+<script>var wts=document.createElement('script');wts.async=true;
+wts.src='https://app.ardalio.com/wts7.js';document.head.appendChild(wts);
+wts.onload = function(){ wtsl7(2205234,2); };
+</script><noscript><img src="https://app.ardalio.com/7/2/2205234.png"></noscript>
+<!-- end code v 7.0 -->
+</body>
+</html>
